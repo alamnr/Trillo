@@ -1,0 +1,22 @@
+/*
+
+primary: #BA265B
+primary light: #BA265C
+primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 3: #ccc
+
+greydark 1: #333;
+greydark 1: #777;
+greydark 1: #999
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #ba265b; }
