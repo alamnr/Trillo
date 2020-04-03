@@ -386,15 +386,19 @@
       margin-right: 0.7rem;
 
       // older browser
-      // background-image: url(../img/chevron-right.svg);
-      // background-size: cover;
+      background-image: url(../img/chevron-right.svg);
+      background-size: cover;
 
       // newer browser -mask
-      background-color: var(--color-primary);
-      -webkit-mask-image: url(../img/chevron-right.svg);
-      --webkit-mask-size: cover;
-      mask-image: url(../img/chevron-right.svg);
-      mask-size: cover;
+      // feature query
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-right.svg);
+        --webkit-mask-size: cover;
+        mask-image: url(../img/chevron-right.svg);
+        mask-size: cover;
+        background-image: none;
+      }
 
       @media only screen and (max-width: $bp-large) {
         height: 2rem;
